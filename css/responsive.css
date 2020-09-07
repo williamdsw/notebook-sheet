@@ -4,7 +4,7 @@
 /* mobile */
 @media only screen and (max-width:500px) {
     .sheet { 
-        width: 70%; 
+        width: 85%; 
     }
 
     .fixed-button {
@@ -21,6 +21,7 @@
     .sheet { 
         margin: 1em auto; 
         float: none; 
+        height: 30em;
     }
 
     .properties-modal { 
@@ -35,8 +36,10 @@
 
     .line label, 
     .line select, 
-    .line input, 
-    .properties-button { 
+    .line input,
+    .link-span,
+    .properties-button
+    { 
         font-size: 12px; 
     }
 
@@ -44,12 +47,20 @@
         width: 80px; 
         height: 30px; 
     }
+
+    .link-span {
+        display: block;
+        width: 100%;
+        margin: 7px 0;
+        text-align: center;
+    }
 }
 
 /* mobile / tablet */
 @media only screen and (min-width:500px) and (max-width: 768px) {
     .sheet { 
         width: 70%; 
+        height: 31em;
         margin: 1em auto; 
         float: none; 
     }
