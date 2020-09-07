@@ -1,0 +1,98 @@
+
+@import 'global.css';
+
+/* mobile */
+@media only screen and (max-width:500px) {
+    .sheet { 
+        width: 70%; 
+    }
+
+    .fixed-button {
+        width: 30px;
+        height: 30px;
+        font-size: 8px;
+        padding: 3px;
+    }
+
+    .show-modal-button { 
+        background-size: 30px; 
+    }
+
+    .sheet { 
+        margin: 1em auto; 
+        float: none; 
+    }
+
+    .properties-modal { 
+        width: 90%; 
+        margin: 1em; 
+        padding: 1em; 
+    }
+
+    .line { 
+        padding: 3px; 
+    }
+
+    .line label, 
+    .line select, 
+    .line input, 
+    .properties-button { 
+        font-size: 12px; 
+    }
+
+    .properties-button  { 
+        width: 80px; 
+        height: 30px; 
+    }
+}
+
+/* mobile / tablet */
+@media only screen and (min-width:500px) and (max-width: 768px) {
+    .sheet { 
+        width: 70%; 
+        margin: 1em auto; 
+        float: none; 
+    }
+
+    .properties-modal { 
+        width: 80%; 
+    }
+}
+
+/* tablet */
+@media only screen and (min-width:768px) and (max-width: 900px)
+{
+    .sheet { 
+        width: 60%;
+        margin: 1em auto; 
+        float: none; 
+    }
+
+    .properties-modal { 
+        width: 60%; 
+    }
+}
+
+/* Laptop */
+@media only screen and (min-width:900px) and (max-width: 1200px) {
+    .sheet { 
+        margin: 1em 3em; 
+        padding: 1em; 
+    }
+
+    .properties-modal { 
+        width: 50%; 
+    }
+}
+
+/* Laptop */
+@media only screen and (min-width: 1200px) and (max-width: 1300px) {
+    .sheet { 
+        margin: 1em 4em; 
+        padding: 1em; 
+    }
+
+    .properties-modal { 
+        width: 40%; 
+    }
+}

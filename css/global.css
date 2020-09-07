@@ -1,0 +1,200 @@
+/* 
+    Created on : 28/03/2019 22:10
+    Author     : William Santos
+*/
+
+/* || Global */
+
+html, 
+body { 
+    width: 100%; 
+    margin: 0; 
+}
+
+body  { 
+    background-color: #e3e2e1; 
+}
+
+* { 
+    box-sizing: border-box; 
+    font-family: 'Courier New', Courier, monospace; 
+}
+
+header > h1, 
+header > h2 {
+    text-align: center;
+}
+
+/* || Sheet and Lines */
+
+.sheet {
+    background-color: white;
+    width: 38%;
+    height: fit-content;
+    margin: 1em 5em;
+    padding: 1em 1em;
+    border: 1px solid #c2c2c2;
+    box-shadow: 5px 10px 10px #888888;
+    float: left;
+}
+
+.input-line {
+    display: block;
+    width: 100%;
+    margin: 7px 0;
+    border: 0;
+    border-bottom: 1px solid dodgerblue;
+    outline: none;
+    background-color: transparent;
+}
+
+.input-line:focus { 
+    border-bottom: 1px dotted dodgerblue; 
+}
+
+.date-input {
+    float: right;
+    border: 0;
+    border-bottom: 1px dotted dodgerblue;
+    margin: 1rem 0;
+}
+
+.date-input:focus {
+    border-bottom: 2px dotted dodgerblue;
+    outline: 0;
+}
+
+.link-span {
+    float: right;
+    margin: 1rem 0;
+}
+
+.link-span > a {
+    cursor: pointer;
+}
+
+/* || Fixed Buttons */
+
+.fixed-button {
+    left: 10px;
+    width: 50px;
+    height: 50px;
+    border: 0;
+    border-radius: 5px;
+    z-index: 1;
+    cursor: pointer;
+}
+
+.demo-button {
+    position: absolute;
+    top: 10px;
+    background-color: rgb(19, 88, 60);
+    color: white;
+}
+
+.demo-button:hover { 
+    background-color: rgb(27, 143, 96); 
+}
+
+.clear-button {
+    position: absolute;
+    top: 65px;
+    background-color: rgb(51, 51, 51);
+    color: white;
+}
+
+.clear-button:hover { 
+    background-color: rgb(83, 83, 83); 
+}
+
+.show-modal-button {
+    position: fixed;
+    top: 120px;
+    background-color: white;
+    background-image: url("../images/settings-icon.png");
+    background-repeat: no-repeat;
+    background-size: 50px;
+}
+
+.show-modal-button:hover { 
+    background-color: darkgray; 
+}
+
+/* || Modal */
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 2;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+.properties-modal {
+    background-color: white;
+    width: 40%;
+    height: fit-content;
+    margin: 1em auto;
+    padding: 2em 1em;
+    border: 3px dotted #a3a3a3;
+}
+
+.row::after { 
+    content: ""; 
+    display: table; 
+    clear: both; 
+}
+
+.column  { 
+    float: left; 
+    width: 50%; 
+}
+
+.line  { 
+    padding: 5px; 
+}
+
+.line label, 
+.line select, 
+.line input, 
+.properties-button { 
+    font-size: 18px; 
+}
+
+.line select, 
+.line input:not([type="color"]) { 
+    width: 100%; 
+}
+
+.properties-button {
+    width: 100px;
+    height: 40px;
+    color: white;
+    border: 0;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close-modal {
+    float: left;
+    background-color: firebrick;
+    box-shadow: 2px 2px 2px rgb(121, 19, 19);
+}
+
+.close-modal:hover { 
+    background-color: red; 
+}
+
+.apply-properties {
+    float: right;
+    background-color: dodgerblue;
+    box-shadow: 2px 2px 2px #5656f7;
+}
+
+.apply-properties:hover { 
+    background-color: blue; 
+}

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <!-- META -->
+        <!-- meta -->
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
@@ -10,167 +10,180 @@
         <meta name="author" content="William Santos">
         <meta name="generator" content="Visual Studio Code">
         
-        <!-- CSS -->
-        <link type="text/css" rel="stylesheet" href="css/notebook-sheet.css">
+        <!-- css -->
+        <link type="text/css" rel="stylesheet" href="css/global.css">
+        <link type="text/css" rel="stylesheet" href="css/responsive.css">
+
         <title> Notebook Sheet Demo </title>
     </head>
     <body>
 
-        <!-- Side Buttons -->
-        <button type="button" id="btn_demo" class="btn-fixed btn-demo"> Demo </button>
-        <button type="button" id="btn_clear" class="btn-fixed btn-clear"> Clear </button>
-        <button type="button" id="btn_modal" class="btn-fixed btn-modal" title="Adjust Parameters"></button>
+        <header>
+            <h1> Notebook Sheet Demo </h1>
+        </header>
 
-        <!-- Parameters Modal -->
-        <div id="modal" class="modal">
-            <div class="modal-parameters">
-                <div class="row line">
-                    <h2> Parameters </h2> 
-                </div>
-    
-                <!-- font size -->
-                <div class="row line">
-                    <div class="column"><label for="txt_font_size"> Font Size: </label></div>
-                    <div class="column">
-                        <input type="text" id="txt_font_size" placeholder="32px" value="">
-                    </div>
-                </div>
-    
-                <!-- font weight -->
-                <div class="row line">
-                    <div class="column"><label for="slc_font_weight"> Font Weight: </label></div>
-                    <div class="column">
-                        <select id="slc_font_weight">
-                            <option value="bold"> bold </option>
-                            <option value="bolder"> bolder </option>
-                            <option value="lighter"> lighter </option>
-                            <option value="normal"> normal </option>
-                        </select>
-                    </div>
-                </div>
-    
-                <!-- font variant -->
-                <div class="row line">
-                    <div class="column"><label for="slc_font_variant"> Font Variant: </label></div>
-                    <div class="column">
-                        <select id="slc_font_variant">
-                            <option value="initial"> initial </option>
-                            <option value="normal"> normal </option>
-                            <option value="small-caps"> small-caps </option>
-                        </select>
-                    </div>
-                </div>
-    
-                <!-- text color -->
-                <div class="row line">
-                    <div class="column"><label for="txt_text_color"> Text Color: </label></div>
-                    <div class="column">
-                        <input type="color" id="txt_text_color" value="">
-                        <label id="lbl_text_color"> Color </label>
-                    </div>
-                </div>
-    
-                <!-- text align -->
-                <div class="row line">
-                    <div class="column"><label for="slc_text_align"> Text Align: </label></div>
-                    <div class="column">
-                        <select id="slc_text_align">
-                            <option value="center"> center </option>
-                            <option value="justify"> justify </option>
-                            <option value="left"> left </option>
-                            <option value="right"> right </option>
-                        </select>
-                    </div>
-                </div>
-    
-                <!-- text decoration -->
-                <div class="row line">
-                    <div class="column"><label for="slc_text_decoration"> Text Decoration: </label></div>
-                    <div class="column">
-                        <select id="slc_text_decoration">
-                            <option value="none"> none </option>
-                            <option value="line-through"> line-through </option>
-                            <option value="overline"> overline </option>
-                            <option value="underline"> underline </option>
-                        </select>
-                    </div>
-                </div>
-    
-                <!-- text transform -->
-                <div class="row line">
-                    <div class="column"><label for="slc_text_transform"> Text Transform: </label></div>
-                    <div class="column">
-                        <select id="slc_text_transform">
-                            <option value="capitalize"> capitalize </option>
-                            <option value="lowercase"> lowercase </option>
-                            <option value="none"> none </option>
-                            <option value="uppercase"> uppercase </option>
-                        </select>
-                    </div>
-                </div>
-    
-                <!-- letter spacing -->
-                <div class="row line">
-                    <div class="column"><label for="txt_letter_spacing"> Letter Spacing: </label></div>
-                    <div class="column">
-                        <input type="text" id="txt_letter_spacing" placeholder="10px" value="">
-                    </div>
-                </div>
-    
-                <!-- letter spacing -->
-                <div class="row line">
-                    <div class="column"><label for="txt_word_spacing"> Word Spacing: </label></div>
-                    <div class="column">
-                        <input type="text" id="txt_word_spacing" placeholder="10px" value="">
-                    </div>
-                </div>
-                
-                <!-- direction -->
-                <div class="row line">
-                    <div class="column"><label for="slc_direction"> Direction: </label></div>
-                    <div class="column">
-                        <select id="slc_direction">
-                            <option value="ltr"> left to right </option>
-                            <option value="rtl"> right to left </option>
-                        </select>
-                    </div>
-                </div>
-                
-                <!-- button -->
-                <div class="row line">
-                    <button type="button" id="btn_close" class="btn-paratemers"> Close </button>
-                    <button type="button" id="btn_apply" class="btn-paratemers"> Apply </button>
-                </div>
-            </div>
-        </div>
+        <main>
 
-        <!-- Sheet / Lines -->
-        <div id="sheets">
-            <div class="sheet">
-                <input type="text" class="input-line" maxlength="60" value="">
-                <input type="text" class="input-line" maxlength="60" value="">
-                <input type="text" class="input-line" maxlength="60" value="">
-                <input type="text" class="input-line" maxlength="60" value="">
-                <input type="text" class="input-line" maxlength="60" value="">
-                <input type="text" class="input-line" maxlength="60" value="">
-                <input type="text" class="input-line" maxlength="60" value="">
-                <input type="text" class="input-line" maxlength="60" value="">
-                <input type="text" class="input-line" maxlength="60" value="">
-                <input type="text" class="input-line" maxlength="60" value="">
-                <input type="text" class="input-line" maxlength="60" value="">
-                <input type="text" class="input-line" maxlength="60" value="">
-                <input type="text" class="input-line" maxlength="60" value="">
-                <input type="text" class="input-line" maxlength="60" value="">
-                <input type="text" class="input-line" maxlength="60" value="">
-                <input type="text" class="input-line" maxlength="60" value="">
-                <input type="text" class="input-line" maxlength="60" value="">
-                <input type="text" class="input-line" maxlength="60" value="">
-                <input type="text" class="input-line" maxlength="60" value="">
-                <input type="text" class="input-line" maxlength="60" value="">
-            </div>
-        </div>
+            <!-- Side Buttons -->
+            <aside>
+                <button type="button" id="demoButton" class="fixed-button demo-button"> Demo </button>
+                <button type="button" id="clearFieldsButton" class="fixed-button clear-button"> Clear </button>
+                <button type="button" id="showModalButton" class="fixed-button show-modal-button" title="Adjust Parameters"></button>
+            </aside>
 
-        <!-- JS -->
-        <script type="text/javascript" src="js/notebook-sheet.js"></script>
+            <!-- Sheet / Lines -->
+            <article>
+                <div id="sheets"></div>
+            </article>
+
+            <!-- Parameters Modal -->
+            <section>
+                <div id="propertiesModal" class="modal">
+                    <div class="properties-modal">
+                        <header>
+                            <h2> Properties </h2> 
+                        </header>
+            
+                        <!-- font size -->
+                        <div class="row line">
+                            <div class="column">
+                                <label for="fontSizeInput"> Font Size: </label>
+                            </div>
+                            <div class="column">
+                                <input type="text" id="fontSizeInput" placeholder="32px">
+                            </div>
+                        </div>
+            
+                        <!-- font weight -->
+                        <div class="row line">
+                            <div class="column">
+                                <label for="fontWeightInput"> Font Weight: </label>
+                            </div>
+                            <div class="column">
+                                <select id="fontWeightInput">
+                                    <option value="bold"> bold </option>
+                                    <option value="bolder"> bolder </option>
+                                    <option value="lighter"> lighter </option>
+                                    <option value="normal"> normal </option>
+                                </select>
+                            </div>
+                        </div>
+            
+                        <!-- font variant -->
+                        <div class="row line">
+                            <div class="column">
+                                <label for="fontVariantSelect"> Font Variant: </label>
+                            </div>
+                            <div class="column">
+                                <select id="fontVariantSelect">
+                                    <option value="initial"> initial </option>
+                                    <option value="normal"> normal </option>
+                                    <option value="small-caps"> small-caps </option>
+                                </select>
+                            </div>
+                        </div>
+            
+                        <!-- text color -->
+                        <div class="row line">
+                            <div class="column">
+                                <label for="textColorInput"> Text Color: </label>
+                            </div>
+                            <div class="column">
+                                <input type="color" id="textColorInput">
+                                <label id="textColorLabel"> Color </label>
+                            </div>
+                        </div>
+            
+                        <!-- text align -->
+                        <div class="row line">
+                            <div class="column">
+                                <label for="textAlignSelect"> Text Align: </label>
+                            </div>
+                            <div class="column">
+                                <select id="textAlignSelect">
+                                    <option value="center"> center </option>
+                                    <option value="justify"> justify </option>
+                                    <option value="left"> left </option>
+                                    <option value="right"> right </option>
+                                </select>
+                            </div>
+                        </div>
+            
+                        <!-- text decoration -->
+                        <div class="row line">
+                            <div class="column">
+                                <label for="textDecorationSelect"> Text Decoration: </label>
+                            </div>
+                            <div class="column">
+                                <select id="textDecorationSelect">
+                                    <option value="none"> none </option>
+                                    <option value="line-through"> line-through </option>
+                                    <option value="overline"> overline </option>
+                                    <option value="underline"> underline </option>
+                                </select>
+                            </div>
+                        </div>
+            
+                        <!-- text transform -->
+                        <div class="row line">
+                            <div class="column">
+                                <label for="textTransformSelect"> Text Transform: </label>
+                            </div>
+                            <div class="column">
+                                <select id="textTransformSelect">
+                                    <option value="capitalize"> capitalize </option>
+                                    <option value="lowercase"> lowercase </option>
+                                    <option value="none"> none </option>
+                                    <option value="uppercase"> uppercase </option>
+                                </select>
+                            </div>
+                        </div>
+            
+                        <!-- letter spacing -->
+                        <div class="row line">
+                            <div class="column">
+                                <label for="letterSpacingInput"> Letter Spacing: </label>
+                            </div>
+                            <div class="column">
+                                <input type="text" id="letterSpacingInput" placeholder="10px">
+                            </div>
+                        </div>
+            
+                        <!-- word spacing -->
+                        <div class="row line">
+                            <div class="column">
+                                <label for="wordSpacingInput"> Word Spacing: </label>
+                            </div>
+                            <div class="column">
+                                <input type="text" id="wordSpacingInput" placeholder="10px">
+                            </div>
+                        </div>
+                        
+                        <!-- direction -->
+                        <div class="row line">
+                            <div class="column">
+                                <label for="directionSelect"> Direction: </label>
+                            </div>
+                            <div class="column">
+                                <select id="directionSelect">
+                                    <option value="ltr"> left to right </option>
+                                    <option value="rtl"> right to left </option>
+                                </select>
+                            </div>
+                        </div>
+                        
+                        <!-- button -->
+                        <div class="row line">
+                            <button type="button" id="closeModalButton" class="properties-button close-modal"> Close </button>
+                            <button type="button" id="applyPropertiesButton" class="properties-button apply-properties"> Apply </button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+        </main>
+
+        <!-- js -->
+        <script type="text/javascript" src="js/index.js"></script>
     </body>
 </html>
